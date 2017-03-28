@@ -1,10 +1,28 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Titolo</title>
+		<title>Easy Camporella</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        <script>
+			function validateForm(f) {
+			var el;
+			el = document.getElementById('user_error');
+			if (f.username.value == "") 
+			el.innerHTML = "Insert username";
+			 else 
+			el.innerHTML = "";
+		
+			 el = document.getElementById('pwd_error');
+			 if ((f.pwd.value == "") || (f.pwd.value.length <9)) 
+			el.innerHTML = "La password deve avere almeno 8 caratteri";
+			 else
+			el.innerHTML = "";
+		
+			 return false;
+			 }
+    	</script>
 		<!-- <script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -25,7 +43,7 @@
 					<div class="container">
 							
 						<!-- Logo -->
-							<h1><a href="#" id="logo">Solarize</a></h1>
+							<h1><a href="#" id="logo"></a></h1>
 						
 						<!-- Nav -->
 							<nav id="nav">
@@ -50,12 +68,44 @@
 											<li><a href="#">Link 9</a></li>
 										</ul>
 									</li> -->
-									<li><a href="https://it.wikipedia.org/wiki/Ritardo_mentale">Chi Siamo</a></li>
-									<li><a href="no-sidebar.html">Login</a></li>
+									<li><a href="#team">Chi Siamo</a></li>
+									<li><a href="#openModal">Login</a></li>
 								</ul>
 							</nav>
 	
 					</div>
+				</div>
+                <div id="openModal" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h3 align="center">Login</h3>
+                        <form onsubmit="return validateForm(this);" id="form1" name="form1">
+                        <div style="padding:20px; ">
+                        <table>
+                            <tr>
+                                <td align="center">Username</td>
+                                <td><input type="text" name="username" size="24"/></td>
+                                <td><span id="user_error" class="error"></span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">Password</td>
+                                <td><input type="password" name="pwd" size="24"/></td>
+                                <td><span id="pwd_error" class="error"></span></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td style="padding:20px" align="center">
+                                <input type="submit" value="Accedi" name="submit" style=" font-size:1em" />
+                                </td>
+                                <td colspan="2">
+                                <a href="sign up.html" >Registrati</a>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
 				</div>
 				
 			<!-- Banner -->
@@ -116,7 +166,7 @@
 								</li>
 								<li>
 									<span class="fa fa-wrench"></span>
-									<h3>Diocane se scopi.</h3>
+									<h3>Cazzo se scopi.</h3>
 									<p>Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat liguala.</p>
 								</li>
 								<li>
@@ -130,12 +180,12 @@
 							<ul class="special-icons">
 								<li>
 									<span class="fa fa-cogs"></span>
-									<h3>Minchia la Zaino</h3>
+									<h3>Dai su</h3>
 									<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula pellentesque.</p>
 								</li>
 								<li>
 									<span class="fa fa-wrench"></span>
-									<h3>Grande PonPon</h3>
+									<h3>H3 a caso</h3>
 									<p>Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat liguala.</p>
 								</li>
 								<li>
@@ -190,11 +240,6 @@
 							<a href="#" class="image"><img src="images/placeholder.png" alt=""></a>
 							<h3>Alessio Bollea</h3>
 							<p>EH VOLEVIIIIIIII!!!!</p>
-						</div>
-						<div class="3u">
-							<a href="#" class="image"><img src="images/placeholder.png" alt=""></a>
-							<h3>Annalisa Bassi</h3>
-							<p>Nota mente geniale, nulla da aggiungere.</p>
 						</div>
 					</div>
 				</section>
