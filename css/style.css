@@ -1,11 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
-/*
-	Solarize by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 /* Basic */
 
@@ -136,32 +131,31 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	textarea {
+	textarea  {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-o-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
 		background: none;
-		border: solid 1px #945d60;
+		border: solid 1.5px #945d60;
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 0.75em;
+		padding: 0.4em;
 		text-decoration: none;
-		width: 100%;
 	}
 
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
-		textarea:focus {
-			border-color: #af473c;
+		textarea:focus  {
+			border-color: #ff8533;
 		}
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"] {
+	input[type="email"]  {
 		line-height: 1em;
 	}
 
@@ -396,6 +390,13 @@
 				background: #555555;
 				color: #fff;
 			}
+			
+	.registration_table {
+		width: 800px;
+		padding: 4em 3em 0em 3em;
+		line-height: 3;
+		font-size:16px;
+	}
 
 /* Button */
 
@@ -563,10 +564,6 @@
 			position: relative;
 		}
 
-	.homepage #logo {
-		display: none;
-	}
-
 	.homepage #nav {
 		position: static;
 		right: none;
@@ -674,7 +671,7 @@
 	}
 
 		#banner .container {
-			padding: 0em 8em;
+			padding: 0em 4em;
 		}
 
 		#banner h2 {
@@ -730,6 +727,7 @@
 		padding: 6em 0 2em 0;
 		text-align: center;
 		color: white;
+		background-color: #222222;
 	}
 
 		#footer hr {
@@ -799,12 +797,24 @@
 		font-weight: 700;
 	}
 	
+	#teamrow {
+		width: 850px ;
+	    margin-left: auto ;
+		margin-right: auto ;	
+	}
+	
+	#teamblock {
+		width: 400px;
+        margin-left: auto ;
+        margin-right: auto ;	
+	}
 	
 /*Login Popup*/
 
-	.modalDialog {
+	.popup {
 		position: fixed;
 		font-family: Arial, Helvetica, sans-serif;
+		font-size:20px;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -818,16 +828,16 @@
 		pointer-events: none;	
 	}
 	
-	.modalDialog:target {
+	.popup:target {
 		opacity:1;
 		pointer-events: auto;
 	}
 
-	.modalDialog > div {
+	.popup > div {
 		width: 700px;
 		position: relative;
 		margin: 10% auto;
-		padding: 5px 20px 13px 20px;
+		padding: 5px 20px 0px 20px;
 		border-radius: 10px;
 		background: #fff;
 		background: -moz-linear-gradient(#fff, #999);
@@ -854,16 +864,12 @@
 		box-shadow: 1px 1px 3px #000;
 	}
 
-	.close:hover { background: #00d9ff; }
-	
-	#modelButton{
-		/*width:50px;*/
-	}
+	.close:hover { background: #945d60; }
 	
 	.error{
 		font-size:0.8em;
 		padding:10px;
 		font-stretch:condensed;
-		color:#FF2828;
-		
+		color:#FF2828;	
 	}
+	

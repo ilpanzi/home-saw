@@ -1,37 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Easy Camporella</title>
+		<title>Appuntamento Smart</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-        <script>
-			function validateForm(f) {
-			var el;
-			el = document.getElementById('user_error');
-			if (f.username.value == "") 
-			el.innerHTML = "Insert username";
-			 else 
-			el.innerHTML = "";
 		
-			 el = document.getElementById('pwd_error');
-			 if ((f.pwd.value == "") || (f.pwd.value.length <9)) 
-			el.innerHTML = "La password deve avere almeno 8 caratteri";
-			 else
-			el.innerHTML = "";
-		
-			 return false;
-			 }
-    	</script>
-		<!-- <script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript> -->
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-		<!-- </noscript> -->
+		<script src="js/scripts.js"></script>
+        
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="images/wine.png" />
+	
 	</head>
 	<body class="homepage">
 
@@ -42,66 +20,42 @@
 				<div id="header">
 					<div class="container">
 							
-						<!-- Logo -->
-							<h1><a href="#" id="logo"></a></h1>
-						
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
 									<li class="active"><a href="index.html">Home</a></li>
-									<!-- <li>
-										<a href="">Tendina</a>
-										<ul>
-											<li><a href="#">Link 1</a></li>
-											<li><a href="#">Link 2</a></li>
-											<li><a href="#">Link 3</a></li>
-											<li>
-												<a href="">Meta Tendina</a>
-												<ul>
-													<li><a href="#">Link 4</a></li>
-													<li><a href="#">Link 5</a></li>
-													<li><a href="#">Link 6</a></li>
-													<li><a href="#">Link 7</a></li>
-													<li><a href="#">Link 8</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Link 9</a></li>
-										</ul>
-									</li> -->
 									<li><a href="#team">Chi Siamo</a></li>
-									<li><a href="#openModal">Login</a></li>
+									<li><a href="#loginPopup">Login/Registrati</a></li>
 								</ul>
 							</nav>
-	
 					</div>
 				</div>
-                <div id="openModal" class="modalDialog">
+                
+                <!-- Login popup -->
+                <div id="loginPopup" class="popup">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h3 align="center">Login</h3>
-                        <form onsubmit="return validateForm(this);" id="form1" name="form1">
+                        <h3 style="padding:20px 20px 30px 20px; font-size:26px" align="center">Login</h3>
+                        <form onsubmit="return validateAccess(this);" id="form1" name="form1">
                         <div style="padding:20px; ">
                         <table>
                             <tr>
                                 <td align="center">Username</td>
-                                <td><input type="text" name="username" size="24"/></td>
+                                <td><input type="text" name="username" widht="100%"/></td>
                                 <td><span id="user_error" class="error"></span></td>
                             </tr>
                             <tr>
                                 <td align="center">Password</td>
-                                <td><input type="password" name="pwd" size="24"/></td>
+                                <td><input type="password" name="pwd" widht="100%"/></td>
                                 <td><span id="pwd_error" class="error"></span></td>
                             </tr>
                             <tr>
-                            </tr>
-                            <tr>
-                                <td style="padding:20px" align="center">
-                                <input type="submit" value="Accedi" name="submit" style=" font-size:1em" />
+                                <td style="padding:40px 20px 0px 20px" align="center">
+                                <input type="submit" value="Accedi" name="submit" style="font-size:1em; font-weight:400" />
                                 </td>
                                 <td colspan="2">
-                                <a href="sign up.html" >Registrati</a>
+                                <a href="sign up.html" style="font-size: 24px">Registrati</a>
                                 </td>
-                                <td></td>
                             </tr>
                         </table>
                         </div>
@@ -111,12 +65,11 @@
 			<!-- Banner -->
 				<div id="banner">
 					<section class="container">
-						<h2>l'appuntamento perfetto</h2>
-						<span>Mai più senza idee per la serata con la tua ragazza</span>
-						<p>Trova i migliori luoghi per il tuo appuntamento e contribuisci alla crescita del nostro sito, aggiungendo le tue mete preferite per aiutare gli altri utenti a scoprire nuove possibilità</p>
+						<h2>appuntamento smart</h2>
+						<span>Trova le migliori idee per la serata con la tua ragazza</span>
+						<p>Scopri luoghi vicino a te già esplorati da altre persone e contribuisci alla crescita del nostro sito, aggiungendo le tue mete preferite per aiutare gli altri utenti a scoprire nuove possibilità</p>
 					</section>
 				</div>
-
 			</div>
 		
 		<!-- Seczione 1 -->
@@ -125,14 +78,14 @@
 					<div class="row double">
 						<div class="6u">
 							<header class="major">
-								<h2>Cosa è Easy Camporella?</h2>
-								<span class="byline">Descrizione fighissima.</span>
+								<h2>Cosa è Appuntamento Smart?</h2>
+								<span class="byline">Un modo per trovare idee e un modo per condividerle</span>
 							</header>
 						</div>
-						<div class="6u">
-							<h3>Titoletto H3</h3>
-							<p>altro paragrafetto</p>
-							<a href="#" class="button">Scopa!</a>
+						<div class="6u" style="padding:0px 0px 40px 60px">
+							<h3>Organizza con semplicità ogni volta una serata diversa e divertente</h3>
+							<p>Molti utenti hanno già condiviso le loro migliori esperienze.</p>
+							<a class="button">Provalo!</a>
 						</div>
 					</div>
 				</section>
@@ -142,37 +95,32 @@
 			<div class="wrapper style3">
 				<section class="container">
 					<header class="major">
-						<h2>Titolo figo</h2>
+						<h2>La tua città non è noiosa come sembra!</h2>
 					</header>
-					<p>Frasetta breve ma intensa, un po come noi.</p>
-					<a href="#" class="button alt">Call to Action figa</a>
+					<p>Molte persone hanno sicuramente già avuto idee stupende per un appuntamento un po' diverso con la loro ragazza.</p>
+					<a class="button alt">Scopri i luoghi sulla mappa</a>
 				</section>
 			</div>
 
-		<!-- Features -->
+		<!-- Idee -->
 			<div class="wrapper style4">
 				<section class="container">
 					<header class="major">
-						<h2>Cras vitae metus aliNuam</h2>
-						<span class="byline">pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.</span>
+						<h2>queste sono le idee che ci hanno ispirato</h2>
+						<span class="byline">La condivisione può migliorare la vita di una comunità in davvero qualsiasi ambito</span>
 					</header>
 					<div class="row flush">
 						<div class="4u">
 							<ul class="special-icons">
 								<li>
 									<span class="fa fa-cogs"></span>
-									<h3>Scopa duro!</h3>
-									<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula pellentesque.</p>
-								</li>
-								<li>
-									<span class="fa fa-wrench"></span>
-									<h3>Cazzo se scopi.</h3>
-									<p>Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat liguala.</p>
+									<h3>quando sei senza idee</h3>
+									<p>Non è sempre facile trovare uno spunto nuovo ad ogni appuntamento, senza ricadere nelle solite abitudini.</p>
 								</li>
 								<li>
 									<span class="fa fa-leaf"></span>
-									<h3>Buttaglielo</h3>
-									<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor.</p>
+									<h3>dopo una serata riuscita</h3>
+									<p>Altri potrebbero trovare utile il tuo consiglio in un momento in cui necessitano di un po' di ispirazione.</p>
 								</li>
 							</ul>
 						</div>
@@ -180,18 +128,13 @@
 							<ul class="special-icons">
 								<li>
 									<span class="fa fa-cogs"></span>
-									<h3>Dai su</h3>
-									<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula pellentesque.</p>
-								</li>
-								<li>
-									<span class="fa fa-wrench"></span>
-									<h3>H3 a caso</h3>
-									<p>Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat liguala.</p>
+									<h3>per rompere la monotonia</h3>
+									<p>Spesso una serata fuori dagli schemi è proprio quello che ci vuole!</p> <br/>
 								</li>
 								<li>
 									<span class="fa fa-leaf"></span>
-									<h3>Fusce ultrices fringilla</h3>
-									<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor.</p>
+									<h3>diamo vita alla città</h3>
+									<p>Non arrendiamoci all'idea che la nostra città non abbia nulla da offrire. </p>
 								</li>
 							</ul>
 						</div>
@@ -199,18 +142,13 @@
 							<ul class="special-icons">
 								<li>
 									<span class="fa fa-cogs"></span>
-									<h3>Nulla luctus eleifend</h3>
-									<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula pellentesque.</p>
-								</li>
-								<li>
-									<span class="fa fa-wrench"></span>
-									<h3>Etiam posuere augue</h3>
-									<p>Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat liguala.</p>
+									<h3>scoprire luoghi nascosti</h3>
+									<p>Molti luoghi bellissimi della nostra città sono probabilmente nascosti e aspettano di essere scoperti.</p>
 								</li>
 								<li>
 									<span class="fa fa-leaf"></span>
-									<h3>Fusce ultrices fringilla</h3>
-									<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor.</p>
+									<h3>all'ultimo minuto</h3>
+									<p>Per un appuntamento improvvisato, naviga sulla mappa e trova il luogo adatto più vicino a te.</p>
 								</li>
 							</ul>
 						</div>
@@ -222,24 +160,19 @@
 			<div class="wrapper style5">
 				<section id="team" class="container">
 					<header class="major">
-						<h2>Guardali sti Coglioni</h2>
-						<span class="byline">Team composto dal 103% da I.U. (Ignoranza Illuminata)</span>
+						<h2>Ecco le nostre facce:</h2>
+						<span class="byline">sentirete parlare di noi...</span>
 					</header>
-					<div class="row">
-						<div class="3u">
-							<a href="#" class="image"><img src="images/Andrea.jpg" width="162px" alt=""></a>
+					<div class="row" id="teamrow">
+						<div class="3u" id="teamblock">
+							<a class="image"><img src="images/Andrea.jpg" width="162px"></a>
 							<h3>Andrea Parodi</h3>
-							<p>Alias Justin Timberlake, è frocio e non capisce un cazzo.</p>
+							<p></p>
 						</div>
-						<div class="3u">
-							<a href="#" class="image"><img src="images/Luca.jpg"  width="162px"alt=""></a>
+						<div class="3u" id="teamblock">
+							<a class="image"><img src="images/Luca.jpg"  width="162px"></a>
 							<h3>Luca Panzi</h3>
-							<p>Guru dell'internette e dei siti web, massima di vita: "A me importa dei cigni su cui sborro."</p>
-						</div>
-						<div class="3u">
-							<a href="#" class="image"><img src="images/placeholder.png" alt=""></a>
-							<h3>Alessio Bollea</h3>
-							<p>EH VOLEVIIIIIIII!!!!</p>
+							<p></p>
 						</div>
 					</div>
 				</section>
@@ -249,14 +182,14 @@
 		<div id="footer">
 			<section class="container">
 				<header class="major">
-					<h2>Connect with us</h2>
-					<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					<h2>Rimaniamo in contatto</h2>
+					<span class="byline">siamo sul tuo social preferito!</span>
 				</header>
 				<ul class="icons">
-					<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-					<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-					<li><a href="#" class="fa fa-dribbble"><span>Pinterest</span></a></li>
-					<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
+					<li class="active"><a class="fa fa-facebook"><span>Facebook</span></a></li>
+					<li><a class="fa fa-twitter"><span>Twitter</span></a></li>
+					<li><a class="fa fa-dribbble"><span>Pinterest</span></a></li>
+					<li><a class="fa fa-google-plus"><span>Google+</span></a></li>
 				</ul>
 				<hr />
 			</section>
